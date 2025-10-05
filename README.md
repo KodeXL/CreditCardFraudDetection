@@ -1,4 +1,4 @@
-# 💳 Credit Card Fraud Detection | Machine Learning Project
+# (IN PROGRESS)💳 Credit Card Fraud Detection | Machine Learning Project
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange.svg)
