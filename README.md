@@ -13,7 +13,6 @@ This project applies **machine learning** techniques to detect fraudulent credit
 By leveraging **sampling strategies** (undersampling & oversampling), **scaling optimization**, and **model comparison**, the analysis identifies the most effective fraud detection model.
 
 📌 **Goal:** Maximize **recall** and **ROC-AUC** while maintaining strong precision to minimize false positives.  
-📊 **Result:** The best-performing model achieved a **ROC-AUC of 100%** under the balanced oversampled Random Forest.
 
 ---
 
