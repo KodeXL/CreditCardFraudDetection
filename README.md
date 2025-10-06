@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange.svg)
 ![Libraries](https://img.shields.io/badge/Libraries-pandas%2C%20scikit--learn%2C%20imbalanced--learn%2C%20matplotlib%2C%20seaborn-green)
-![Status](https://img.shields.io/badge/Status-Completed-success.svg)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)
 
 ---
 
