@@ -134,5 +134,5 @@ Each model was evaluated using:
 - Perform threshold tuning to optimize trade-offs between precision and recall.
 
 📚 References
-- Imbalanced-learn ((SMOTE)[https://imbalanced-learn.org/stable/references/over_sampling.html])
-- (Credit Card Fraud Detection Dataset – Kaggle)[https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud]
+- Imbalanced-learn ([SMOTE](https://imbalanced-learn.org/stable/references/over_sampling.html))
+- [Credit Card Fraud Detection Dataset – Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
