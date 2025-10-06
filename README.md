@@ -117,8 +117,6 @@ Each model was evaluated using:
 
 ## 🏆 Key Insights
 
-- **Balanced Oversampled Random Forest** achieved **ROC-AUC = 1.00** and perfect recall, meaning it identified every fraudulent transaction in the test set.  
-- **Balanced Oversampled Logistic Regression** followed closely (ROC-AUC ≈ 0.9888), maintaining strong interpretability.  
 - **Undersampling** provided competitive but slightly lower recall.  
 - Models trained on the imbalanced dataset had deceptively high accuracy but low fraud detection sensitivity.  
 - Class balancing significantly improved **recall** and **AUC**, the two most critical metrics in fraud detection.
