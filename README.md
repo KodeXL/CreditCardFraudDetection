@@ -24,7 +24,7 @@ By leveraging **sampling strategies** (undersampling & oversampling), **scaling 
   - `0` → Legitimate transactions  
   - `1` → Fraudulent transactions  
 - **Features:**
-  - `V1`–`V28`: PCA-transformed numerical features
+  - `V1`–`V28`: PCA-transformed numerical features \n
 ***(Assumption: The features were standardized before PCA transformation was applied )***
   - `Time`, `Amount`: Non-PCA features requiring scaling  
 
