@@ -125,26 +125,14 @@ Each model was evaluated using:
 
 ---
 
-## 🧪 Reproducibility
 
-### 🔧 Requirements
-```bash
-pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
 
-▶️ Run the Project
+🚀 Future Work
+- Implement XGBoost and LightGBM for comparative performance.
+- Explore feature importance to identify top predictors of fraud.
+- Integrate the model into a real-time fraud detection pipeline with stream data simulation.
+- Perform threshold tuning to optimize trade-offs between precision and recall.
 
-# Clone the repository
-git clone https://github.com/kodexl/CreditCardFraudDetection.git
-
-# Launch the notebook
-jupyter notebook CreditCardFraudDetection.ipynb
-Run cells sequentially to reproduce preprocessing, sampling, training, and evaluation results.
-
-📊 Visualizations (Recommended)
-Visualization	Description
-ROC Curves	Comparison of model discrimination across resampling methods
-Confusion Matrices	Fraud detection vs false positives
-Feature Distributions	Scaling effect on Amount and Time
-Class Distribution	Before vs. after SMOTE
-
-(Add generated plots to /images and link here for GitHub rendering.)
+📚 References
+- Imbalanced-learn ((SMOTE)[https://imbalanced-learn.org/stable/references/over_sampling.html])
+- (Credit Card Fraud Detection Dataset – Kaggle)[https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud]
