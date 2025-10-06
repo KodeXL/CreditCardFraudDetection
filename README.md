@@ -36,7 +36,7 @@ By leveraging **sampling strategies** (undersampling & oversampling), **scaling 
 - Confirmed **no missing values**.  
 - Fraudulent cases represent **~0.172%** of total records.  
 - Correlation heatmaps verified orthogonality of PCA features.  
-- Visualized transaction frequency by time and amount.
+- Visualized the distribution of variables.
 
 ### 2. Feature Scaling
 | Feature | Scaler Used | Justification |
