@@ -25,7 +25,6 @@ By leveraging **sampling strategies** (undersampling & oversampling), **scaling 
   - `1` → Fraudulent transactions  
 - **Features:**
   - `V1`–`V28`: PCA-transformed numerical features
-    *(Assumption: The features were standardized before PCA transformation was applied )*
   - `Time`, `Amount`: Non-PCA features requiring scaling  
 
 ---
@@ -36,20 +35,20 @@ By leveraging **sampling strategies** (undersampling & oversampling), **scaling 
 - Confirmed **no missing values**.  
 - Fraudulent cases represent **~0.172%** of total records.  
 - Correlation heatmaps verified orthogonality of PCA features.  
-- Visualized the distribution of variables.
+- Visualized the distribution of all variables and performed frequency analysis of fraud vs non-fraud classes
 
 ### 2. Feature Scaling
 | Feature | Scaler Used | Justification |
 |----------|--------------|----------------|
-| `Amount` | `StandardScaler` | Normalizes transaction magnitude |
-| `Time` | `RobustScaler` | Handles outliers and skew |
+| `Amount` | `RobustScaler` | Handles outliers and skew |
+| `Time` | `MinMax` | Scales to a fixed range [0, 1] |
 | `V1–V28` | None | Already scaled via PCA |
 
 > PCA inherently standardizes data before component extraction, so additional scaling is unnecessary.
 
 ### 3. Train–Test Split
 - Split: **80% training / 20% testing**
-- Stratified to preserve class proportions  
+- Stratified to preserve class proportions (for base model evaluation)
 - Fixed `random_state` for reproducibility  
 
 ### 4. Handling Class Imbalance
@@ -87,22 +86,22 @@ Each model was evaluated using:
 ## 🧩 Model Performance Summary
 
 ### ⚖️ Base (Imbalanced Data)
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
-|--------|-----------|------------|----------|----------|-----------|
-| Logistic Regression | 99.91% | 84.62% | 57.89% | 68.75% | **0.956** |
-| Decision Tree | 99.92% | 80.72% | 70.53% | 75.28% | 0.868 |
-| Random Forest | 99.95% | 97.10% | 70.53% | 81.71% | 0.924 |
-| Linear SVC | 99.91% | 79.01% | 67.37% | 72.73% | 0.952 |
+| Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|--------|----------------|----------------|------------|----------|----------|-----------|
+| Logistic Regression | 99.91 | 99.91 | 84.62 | 57.89 | 68.75 | **0.956** |
+| Decision Tree | 99.98 | 99.92 | 80.72 | 70.53 | 75.28 | 0.868 |
+| Random Forest | 100.00 | 99.95 | 97.10 | 70.53 | 81.71 | 0.924 |
+| Linear SVC | 99.92 | 99.91 | 79.01 | 67.37 | 72.73 | 0.952 |
 
 ---
 
 ### 🔽 Undersampling (Balanced Data)
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
-|--------|-----------|------------|----------|----------|-----------|
-| Logistic Regression | 95.79% | 98.02% | 94.29% | 96.12% | **0.9835** |
-| Decision Tree | 95.26% | 98.98% | 92.38% | 95.57% | 0.966 |
-| Random Forest | 94.74% | 98.97% | 91.43% | 95.05% | 0.984 |
-| SVM (Linear) | 95.79% | 98.02% | 94.29% | 96.12% | 0.974 |
+| Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|--------|----------------|----------------|------------|----------|----------|-----------|
+| Logistic Regression | 95.42 | 95.79 | 98.02 | 94.29 | 96.12 | **0.9835** |
+| Decision Tree | 96.01 | 95.26 | 98.98 | 92.38 | 95.57 | 0.966 |
+| Random Forest | 99.89 | 94.74 | 98.97 | 91.43 | 95.05 | 0.984 |
+| Linear SVC | 96.02 | 95.79 | 98.02 | 94.29 | 96.12 | 0.974 |
 
 ---
 
@@ -112,7 +111,7 @@ Each model was evaluated using:
 | Logistic Regression | 94.69 | 94.73 | 97.52 | 91.83 | 94.59 | 98.88 |
 | Decision Tree | 93.96 | 93.96 | 96.61 | 91.16 | 93.81 | 98.08 |
 | SVM (Linear) | 94.29 | 94.39 | 97.69 | 90.97 | 94.21 | 98.88 |
-| Random Forest | 100.00 | **99.99** | **99.99** | **100.00** | **99.99** | **100.00** |
+| Random Forest | **100.00** | **99.99** | **99.99** | **100.00** | **99.99** | **100.00** |
 
 ---
 
