@@ -136,12 +136,20 @@ In contrast, Logistic Regression and Linear SVC delivered consistently high reca
 
 ---
 
-🚀 Future Work
-- Implement XGBoost and LightGBM for comparative performance.
-- Explore feature importance to identify top predictors of fraud.
-- Integrate the model into a real-time fraud detection pipeline with stream data simulation.
-- Perform threshold tuning to optimize trade-offs between precision and recall.
+## 🚀 Future Work
+- Implement **XGBoost** and **LightGBM** for comparative benchmarking.
+- Explore **feature importance** (e.g., SHAP) to identify top predictors of fraud.
+- Perform **threshold tuning** to optimize precision–recall trade-offs.
+- Build a lightweight **GUI for interactive testing** (e.g., Streamlit / Gradio / Dash) that lets users input feature values (`Amount`, `Time`, `V1–V28`) and view predicted class, probability, and explanation (feature contributions) in real time.
+
+---
 
 📚 References
 - Imbalanced-learn ([SMOTE](https://imbalanced-learn.org/stable/references/over_sampling.html))
 - Credit Card Fraud Detection Dataset – [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+
+---
+
+## 👤 Author
+- Olamide Olayinka
+- 💼 [LinkedIn](https://www.linkedin.com/in/olamide-olayinka-a8222518/)
