@@ -135,4 +135,4 @@ Each model was evaluated using:
 
 📚 References
 - Imbalanced-learn ([SMOTE](https://imbalanced-learn.org/stable/references/over_sampling.html))
-- [Credit Card Fraud Detection Dataset – Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- Credit Card Fraud Detection Dataset – [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
