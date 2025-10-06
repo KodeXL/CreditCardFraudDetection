@@ -9,10 +9,9 @@
 
 ## 🧠 Project Overview
 
-This project applies **machine learning** techniques to detect fraudulent credit card transactions within a highly imbalanced dataset.  
-By leveraging **sampling strategies** (undersampling & oversampling), **scaling optimization**, and **model comparison**, the analysis identifies the most effective fraud detection model.
+This project develops and compares multiple machine learning models to detect fraudulent credit card transactions. Given the extreme class imbalance typical in fraud detection datasets, the analysis explores both undersampling and oversampling strategies to balance the data and enhance model performance.
 
-📌 **Goal:** Maximize **recall** and **ROC-AUC** while maintaining strong precision to minimize false positives.  
+The models are evaluated using key performance metrics such as ROC-AUC, precision, recall, and F1-score, with the goal of identifying the model that best distinguishes fraudulent from legitimate transactions.
 
 ---
 
