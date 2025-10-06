@@ -128,7 +128,6 @@ Random Forest achieved perfect metrics after SMOTE, but its 100% training accura
 - Models trained on the imbalanced dataset had deceptively high accuracy but low fraud detection sensitivity.  
 - Class balancing significantly improved **recall** and **AUC**, the two most critical metrics in fraud detection.
 
-> 🧩 **Conclusion:** The best overall model was the **Random Forest (SMOTE-balanced)**, achieving near-perfect classification while avoiding false negatives.
 
 ---
 
