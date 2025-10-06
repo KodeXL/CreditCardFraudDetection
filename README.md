@@ -122,7 +122,9 @@ Imbalanced models appeared strong at first glance, with 99%+ accuracy, but faile
 
 Balancing the data through undersampling and SMOTE oversampling shifted performance toward what truly matters — identifying fraudulent activity. Recall rose above 90% across models, and ROC-AUC values approached 0.98–0.99.
 
-Random Forest achieved perfect metrics after SMOTE, but its 100% training accuracy suggested overfitting. In contrast, Logistic Regression and Linear SVC delivered consistently high recall and ROC-AUC without overfitting, making them more reliable for real-world use.
+Random Forest achieved perfect metrics after SMOTE, but its 100% training accuracy suggested overfitting. 
+
+In contrast, Logistic Regression and Linear SVC delivered consistently high recall and ROC-AUC without overfitting, making them more reliable for real-world use.
 
 📈 Final takeaway: Balancing the dataset proved essential. For production, a SMOTE-balanced Logistic Regression or Linear SVC offers the best mix of recall, stability, and interpretability.
 - Models trained on the imbalanced dataset had deceptively high accuracy but low fraud detection sensitivity.  
