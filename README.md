@@ -122,7 +122,11 @@ Imbalanced models appeared strong at first glance, with 99%+ accuracy, but faile
 
 Balancing the data through undersampling and SMOTE oversampling shifted performance toward what truly matters — identifying fraudulent activity. Recall rose above 90% across models, and ROC-AUC values approached 0.98–0.99.
 
-Random Forest achieved perfect metrics after SMOTE, but its 100% training accuracy suggested overfitting. 
+When the dataset was balanced using SMOTE oversampling and Random Undersampling, the overall accuracy decreased compared to the highly imbalanced dataset.
+This reduction is expected — balancing reduces the dominance of the majority (non-fraud) class, leading to a lower raw accuracy score.
+However, this trade-off improved the model’s recall and ROC-AUC, meaning the balanced models became significantly better at detecting actual fraud cases.
+
+⚠️ **Note:** Random Forest achieved perfect metrics after SMOTE, but its 100% training accuracy suggested overfitting.
 
 In contrast, Logistic Regression and Linear SVC delivered consistently high recall and ROC-AUC without overfitting, making them more reliable for real-world use.
 
@@ -130,10 +134,7 @@ In contrast, Logistic Regression and Linear SVC delivered consistently high reca
 - Models trained on the imbalanced dataset had deceptively high accuracy but low fraud detection sensitivity.  
 - Class balancing significantly improved **recall** and **AUC**, the two most critical metrics in fraud detection.
 
-
 ---
-
-
 
 🚀 Future Work
 - Implement XGBoost and LightGBM for comparative performance.
