@@ -88,30 +88,34 @@ Each model was evaluated using:
 ### ⚖️ Base (Imbalanced Data)
 | Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |--------|----------------|----------------|------------|----------|----------|-----------|
-| Logistic Regression | 99.92 | 99.91 | 84.62 | 57.89 | 68.75 | 0.96 |
-| LinearSVC Model | 99.92 | 99.92 | 79.01 | 67.37 | 72.73 | 0.95 |
-| <span style="color:red">Random Forest</span> | <span style="color:red">100.00</span> | <span style="color:red">99.95</span> | 97.10 | 70.53 | 81.71 | 0.92 |
+| Logistic Regression | 99.92 | 99.91 | 84.62 | 57.89 | 68.75 | **0.96** |
+| Linear SVC | 99.92 | 99.92 | 79.01 | 67.37 | 72.73 | 0.95 |
+| **Random Forest** | **100.00** | **99.95** | 97.10 | 70.53 | 81.71 | 0.92 |
 | Decision Tree | 99.95 | 99.92 | 80.72 | 70.53 | 75.28 | 0.87 |
+
+
 
 ---
 
 ### 🔽 Undersampling (Balanced Data)
 | Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |--------|----------------|----------------|------------|----------|----------|-----------|
-| Balanced Undersampled Logistic Regression | 94.84 | 95.79 | 98.02 | 94.29 | 96.12 | 0.98 |
-| Balanced Undersampled SVM | 94.84 | 95.79 | 98.02 | 94.29 | 96.12 | 0.97 |
-| Balanced Undersampled Decision Tree | 95.63 | 95.26 | 98.98 | 92.38 | 95.57 | 0.97 |
-| <span style="color:red">Balanced Undersampled Random Forest</span> | <span style="color:red">100.00</span> | <span style="color:red">94.74</span> | <span style="color:red">98.97</span> | <span style="color:red">91.43</span> | <span style="color:red">95.05</span> | <span style="color:red">0.98</span> |
+| Random Forest | 100.00 | 94.74 | 98.97 | 91.43 | 95.05 | 0.98 |
+| Logistic Regression | 94.84 | 95.79 | 98.02 | 94.29 | 96.12 | **0.98** |
+| Linear SVC | 94.84 | 95.79 | 98.02 | 94.29 | 96.12 | 0.97 |
+| Decision Tree | 95.63 | 95.26 | 98.98 | 92.38 | 95.57 | 0.97 |
+
 
 ---
 
 ### 🔼 Oversampling (SMOTE – Balanced)
 | Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |--------|----------------|----------------|------------|----------|----------|-----------|
-| <span style="color:red">Balanced Oversampled Random Forest</span> | <span style="color:red">100.00</span> | <span style="color:red">99.99</span> | 99.99 | 100.00 | 99.99 | 1.00 |
-| Balanced Oversampled Logistic Regression | 94.69 | 94.73 | 97.52 | 91.83 | 94.59 | 0.99 |
-| Balanced Oversampled SVM | 94.29 | 94.39 | 97.69 | 90.97 | 94.21 | 0.99 |
-| Balanced Oversampled Decision Tree | 93.96 | 93.96 | 96.61 | 91.16 | 93.81 | 0.98 |
+| Random Forest | **100.00** | **99.99** | **99.99** | **100.00** | **99.99** | **1** |
+| Logistic Regression | 94.65 | 94.79 | 97.52 | 91.94 | 94.65 | 0.99 |
+| Linear SVC | 94.24 | 94.35 | 97.75 | 90.82 | 94.16 | 0.99 |
+| Decision Tree | 93.89 | 93.90 | 96.63 | 91.00 | 93.73 | 0.98 |
+
 
 ---
 
