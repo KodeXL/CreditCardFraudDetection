@@ -130,7 +130,7 @@ However, this trade-off improved the model’s recall and ROC-AUC, meaning the b
 
 In contrast, Logistic Regression and Linear SVC delivered consistently high recall and ROC-AUC without overfitting, making them more reliable for real-world use.
 
-📈 Final takeaway: Balancing the dataset proved essential. For production, a SMOTE-balanced Logistic Regression or Linear SVC offers the best mix of recall, stability, and interpretability.
+📈 Final takeaway: Balancing the dataset proved essential. For production, an undersampled balanced Logistic Regression or Linear SVC offers the best mix of recall, stability, and interpretability.
 - Models trained on the imbalanced dataset had deceptively high accuracy but low fraud detection sensitivity.  
 - Class balancing significantly improved **recall** and **AUC**, the two most critical metrics in fraud detection.
 
