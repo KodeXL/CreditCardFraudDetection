@@ -20,11 +20,11 @@ By leveraging **sampling strategies** (undersampling & oversampling), **scaling 
 
 - **Source:** Publicly available, anonymized credit card transaction dataset.  
 - **Shape:** 284,807 rows × 31 columns  
-- **Target Variable:**  
+- **Target Variable:** Class 
   - `0` → Legitimate transactions  
   - `1` → Fraudulent transactions  
 - **Features:**
-  - `V1`–`V28`: PCA-transformed numerical features  
+  - `V1`–`V28`: PCA-transformed numerical features ***(Assumption: The features were standardized before PCA transformation was applied )***
   - `Time`, `Amount`: Non-PCA features requiring scaling  
 
 ---
