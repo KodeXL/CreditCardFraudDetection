@@ -151,5 +151,7 @@ In contrast, Logistic Regression and Linear SVC delivered consistently high reca
 ---
 
 ## 👤 Author
-- Olamide Olayinka
+Olamide Olayinka
 - 💼 [LinkedIn](https://www.linkedin.com/in/olamide-olayinka-a8222518/)
+- 📊 [Portfolo](https://kodexl.github.io/olamideolayinka/)
+- 📧 [Email](mailto:olamideolayinka@cmail.carleton.ca )
