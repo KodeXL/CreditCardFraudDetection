@@ -88,30 +88,30 @@ Each model was evaluated using:
 ### ⚖️ Base (Imbalanced Data)
 | Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |--------|----------------|----------------|------------|----------|----------|-----------|
-| Logistic Regression | 99.91 | 99.91 | 84.62 | 57.89 | 68.75 | **0.956** |
-| Decision Tree | 99.98 | 99.92 | 80.72 | 70.53 | 75.28 | 0.868 |
-| Random Forest | 100.00 | 99.95 | 97.10 | 70.53 | 81.71 | 0.924 |
-| Linear SVC | 99.92 | 99.91 | 79.01 | 67.37 | 72.73 | 0.952 |
+| Logistic Regression | 99.92 | 99.91 | 84.62 | 57.89 | 68.75 | 0.96 |
+| LinearSVC Model | 99.92 | 99.92 | 79.01 | 67.37 | 72.73 | 0.95 |
+| <span style="color:red">Random Forest</span> | <span style="color:red">100.00</span> | <span style="color:red">99.95</span> | 97.10 | 70.53 | 81.71 | 0.92 |
+| Decision Tree | 99.95 | 99.92 | 80.72 | 70.53 | 75.28 | 0.87 |
 
 ---
 
 ### 🔽 Undersampling (Balanced Data)
 | Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |--------|----------------|----------------|------------|----------|----------|-----------|
-| Logistic Regression | 95.42 | 95.79 | 98.02 | 94.29 | 96.12 | **0.9835** |
-| Decision Tree | 96.01 | 95.26 | 98.98 | 92.38 | 95.57 | 0.966 |
-| Random Forest | 99.89 | 94.74 | 98.97 | 91.43 | 95.05 | 0.984 |
-| Linear SVC | 96.02 | 95.79 | 98.02 | 94.29 | 96.12 | 0.974 |
+| Balanced Undersampled Logistic Regression | 94.84 | 95.79 | 98.02 | 94.29 | 96.12 | 0.98 |
+| Balanced Undersampled SVM | 94.84 | 95.79 | 98.02 | 94.29 | 96.12 | 0.97 |
+| Balanced Undersampled Decision Tree | 95.63 | 95.26 | 98.98 | 92.38 | 95.57 | 0.97 |
+| <span style="color:red">Balanced Undersampled Random Forest</span> | <span style="color:red">100.00</span> | <span style="color:red">94.74</span> | <span style="color:red">98.97</span> | <span style="color:red">91.43</span> | <span style="color:red">95.05</span> | <span style="color:red">0.98</span> |
 
 ---
 
 ### 🔼 Oversampling (SMOTE – Balanced)
 | Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |--------|----------------|----------------|------------|----------|----------|-----------|
-| Logistic Regression | 94.69 | 94.73 | 97.52 | 91.83 | 94.59 | 98.88 |
-| Decision Tree | 93.96 | 93.96 | 96.61 | 91.16 | 93.81 | 98.08 |
-| SVM (Linear) | 94.29 | 94.39 | 97.69 | 90.97 | 94.21 | 98.88 |
-| Random Forest | **100.00** | **99.99** | **99.99** | **100.00** | **99.99** | **100.00** |
+| <span style="color:red">Balanced Oversampled Random Forest</span> | <span style="color:red">100.00</span> | <span style="color:red">99.99</span> | 99.99 | 100.00 | 99.99 | 1.00 |
+| Balanced Oversampled Logistic Regression | 94.69 | 94.73 | 97.52 | 91.83 | 94.59 | 0.99 |
+| Balanced Oversampled SVM | 94.29 | 94.39 | 97.69 | 90.97 | 94.21 | 0.99 |
+| Balanced Oversampled Decision Tree | 93.96 | 93.96 | 96.61 | 91.16 | 93.81 | 0.98 |
 
 ---
 
