@@ -170,12 +170,9 @@ That said, one way to evaluate this visually is by comparing the distributions o
 To address the trade-off between class balance and information retention, a few techniques worth exploring are:
 
 1. Using stratified sampling to preserve key distributions. (Dividing that class into bins based on a key feature (eg. Transaction amount and sampling proportionally from each bin, so the amount distribution in your sample matches the complete data.)
-
-﻿﻿2. Ensemble undersampling techniques. Methods like BalancedBaggingClassifier, EasyEnsemble, or BalanceCascade train multiple classifiers on different under-sampled subsets. This allows the model to learn from more of the majority class across the ensemble, rather than discarding data outright.
-
-﻿﻿﻿3. Trying alternative under-sampling techniques like SMOTE-Tomek, SMOTE-ENN; methods that minimize information loss during undersampling by selectively removing noisy or ambiguous samples rather than random ones, or NearMiss which reduces the majority class by selecting samples that lie close to the minority class boundary, helping the model focus on harder examples, but it doesn't explicitly remove noise or outliers.
-
-﻿﻿﻿4. Cluster-based sampling - using clustering like KMeans on non-fraud and then sample evenly from each cluster
+2. Ensemble undersampling techniques. Methods like BalancedBaggingClassifier, EasyEnsemble, or BalanceCascade train multiple classifiers on different under-sampled subsets. This allows the model to learn from more of the majority class across the ensemble, rather than discarding data outright.
+3. Trying alternative under-sampling techniques like SMOTE-Tomek, SMOTE-ENN; methods that minimize information loss during undersampling by selectively removing noisy or ambiguous samples rather than random ones, or NearMiss which reduces the majority class by selecting samples that lie close to the minority class boundary, helping the model focus on harder examples, but it doesn't explicitly remove noise or outliers.
+4. Cluster-based sampling - using clustering like KMeans on non-fraud and then sample evenly from each cluster
 
 ---
 
