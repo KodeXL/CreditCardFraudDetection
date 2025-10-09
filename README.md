@@ -114,7 +114,7 @@ Each model was evaluated using:
 
 ---
 
-## 🔑 Key Insights
+# 🔑 Key Insights
 
 Handling class imbalance dramatically improved fraud detection performance.
 
