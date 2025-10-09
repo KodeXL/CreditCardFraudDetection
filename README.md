@@ -163,24 +163,24 @@ However, this trade-off improved the model’s recall and ROC-AUC, meaning the b
 When we randomly drop data, we inherently lose information, and it is likely to distort the feature distribution of the majority class being sampled, especially when choosing just a small subset of it. This distortion risks training a model on a dataset that no longer reflects the true characteristics of the original non-fraud class, which in turn may degrade performance on unseen data.
 
 That said, one way to evaluate this visually is by comparing the distributions of the original and under-sampled non-fraud data using histograms or KDE plots for key features. I would suggest these shapes look similar in their distribution, although, of course, some information loss is inevitable, but it suggests that the under-sampling process preserved the general structure of the non-fraud class (maybe? 🤷‍♂️, especially considering the scale of the x axis)
+
 ![Distribution of Amount](Assets/3.png)
 
 
 To address the trade-off between class balance and information retention, a few techniques worth exploring are:
 
-Using stratified sampling to preserve key distributions. (Dividing that class into bins based on a key feature (eg. Transaction amount and sampling proportionally from each bin, so the amount distribution in your sample matches the complete data.)
+1. Using stratified sampling to preserve key distributions. (Dividing that class into bins based on a key feature (eg. Transaction amount and sampling proportionally from each bin, so the amount distribution in your sample matches the complete data.)
 
-﻿﻿Ensemble undersampling techniques. Methods like BalancedBaggingClassifier, EasyEnsemble, or BalanceCascade train multiple classifiers on different under-sampled subsets. This allows the model to learn from more of the majority class across the ensemble, rather than discarding data outright.
+﻿﻿2. Ensemble undersampling techniques. Methods like BalancedBaggingClassifier, EasyEnsemble, or BalanceCascade train multiple classifiers on different under-sampled subsets. This allows the model to learn from more of the majority class across the ensemble, rather than discarding data outright.
 
-﻿﻿﻿Trying alternative under-sampling techniques like SMOTE-Tomek, SMOTE-ENN; methods that minimize information loss during undersampling by selectively removing noisy or ambiguous samples rather than random ones, or NearMiss which reduces the majority class by selecting samples that lie close to the minority class boundary, helping the model focus on harder examples, but it doesn't explicitly remove noise or outliers.
+﻿﻿﻿3. Trying alternative under-sampling techniques like SMOTE-Tomek, SMOTE-ENN; methods that minimize information loss during undersampling by selectively removing noisy or ambiguous samples rather than random ones, or NearMiss which reduces the majority class by selecting samples that lie close to the minority class boundary, helping the model focus on harder examples, but it doesn't explicitly remove noise or outliers.
 
-﻿﻿﻿Cluster-based sampling - using clustering like KMeans on non-fraud and then sample evenly from each cluster
-
+﻿﻿﻿4. Cluster-based sampling - using clustering like KMeans on non-fraud and then sample evenly from each cluster
 
 ---
 
-
 ## 🚀 Future Work
+- Investigate other methods of undersampling.
 - Implement **XGBoost** and **LightGBM** for comparative benchmarking.
 - Explore **feature importance** (e.g., SHAP) to identify top predictors of fraud.
 - Perform **threshold tuning** to optimize precision–recall trade-offs.
